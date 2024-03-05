@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../screens/home/home_page.dart';
+import '../screens/login/login_page.dart';
 
 class RouteHelper {
   static GoRouter routes = GoRouter(
@@ -9,7 +9,7 @@ class RouteHelper {
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          return const HomePage();
+          return const LoginPage();
         },
       ),
     ],

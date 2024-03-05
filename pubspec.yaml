@@ -15,6 +15,10 @@ dependencies:
   go_router: ^13.2.0
   flutter_bloc: ^8.1.4
   http: ^1.2.1
+  url_launcher: ^6.2.5
+  universal_platform: ^1.0.0+1
+  flutter_svg: ^2.0.10+1
+  google_sign_in: ^6.2.1
 
 dev_dependencies:
   flutter_test:
@@ -25,6 +29,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/fonts
-    - assets/icons
-    - assets/images
+    - assets/images/web_login.png
+    - assets/images/google.svg

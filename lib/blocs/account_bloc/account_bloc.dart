@@ -8,6 +8,10 @@ part 'account_state.dart';
 class AccountBloc extends Bloc<AccountEvent, AccountState> {
   final BaseAccountApi accountApi;
   AccountBloc({required this.accountApi}) : super(AccountInitial()) {
+    on<GetAccountErrorEvent>((event, emit) async {
+      emit(AccountError(event.errorMessage));
+    });
+
     on<GetAccountEvent>((event, emit) async {
       emit(AccountLoading());
       try {

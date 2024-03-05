@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 import '../api/account/api_account_api.dart';
 import '../api/http_api.dart';
@@ -23,6 +24,14 @@ class BlocMainWrapper extends StatelessWidget {
       providers: <RepositoryProvider>[
         RepositoryProvider<BaseConfig>(
           create: (context) => config,
+        ),
+        RepositoryProvider<GoogleSignIn>(
+          create: (context) => GoogleSignIn(
+            clientId: config.googleClientId,
+            scopes: <String>[
+              'email',
+            ],
+          ),
         ),
         RepositoryProvider<BaseAccountApi>(
           create: (context) => AccountApi(api: api),

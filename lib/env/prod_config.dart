@@ -6,4 +6,6 @@ class ProdConfig extends BaseConfig {
 
   @override
   bool get useSsl => true;
+  @override
+  String get googleClientId => '';
 }

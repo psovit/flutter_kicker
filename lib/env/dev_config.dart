@@ -6,4 +6,7 @@ class DevConfig extends BaseConfig {
 
   @override
   bool get useSsl => false;
+
+  @override
+  String get googleClientId => '';
 }
