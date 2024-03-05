@@ -1,4 +1,4 @@
-import 'package:flutter_kicker/env/base_config.dart';
+import 'base_config.dart';
 
 class ProdConfig extends BaseConfig {
   @override

@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const DefaultAppBar(titleText: 'Luga Admin Home'),
+      appBar: const DefaultAppBar(titleText: 'Flutter Kicker'),
       body: Container(
         padding: const EdgeInsets.all(24),
         child: const Center(

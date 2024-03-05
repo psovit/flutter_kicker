@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../api/account/api_account_api.dart';
 import '../api/http_api.dart';
 import '../env/base_config.dart';
+import 'account_bloc/account_bloc.dart';
 
 class BlocMainWrapper extends StatelessWidget {
   final BaseConfig config;
@@ -30,8 +31,12 @@ class BlocMainWrapper extends StatelessWidget {
         //add other api repos here...
       ],
       child: MultiBlocProvider(
-        providers: const <BlocProvider>[
-          //add blocs here..
+        providers: <BlocProvider>[
+          BlocProvider<AccountBloc>(
+            create: (context) => AccountBloc(
+              accountApi: context.read<BaseAccountApi>(),
+            ),
+          )
         ],
         child: child,
       ),
